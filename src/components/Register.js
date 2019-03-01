@@ -248,7 +248,7 @@ export default class Register extends Component{
                             </View>    
                             <Item floatingLabel style={{borderBottomColor:this.state.MobileBorder,marginTop:10,borderBottomWidth:this.state.MobileBorderWidth}} >
                                 <Label style={{color:"black"}}>Mobile</Label>
-                                <Input onChangeText={this.Mobile} value={this.state.Mobile} />
+                                <Input keyboardType='decimal-pad' onChangeText={this.Mobile} value={this.state.Mobile} />
                             </Item>
                             <Item style={style.DatePicker}>
                             <DatePicker

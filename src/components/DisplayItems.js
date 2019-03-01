@@ -30,17 +30,17 @@ export default class DisplayItems extends Component {
                             <Title>Alpha Store</Title>
                         </Body>
                         <Right>
-                        <TouchableOpacity onPress={() => this.props.navigation.toggleDrawer()}>
-                            <Icon name='favorite' type="MaterialIcons" style={{color:'white'}} />
-                        </TouchableOpacity>
-                        {/* for space */}
-                        <TouchableOpacity>
-                            <Icon name='cart' style={{color:'#808080'}} />
-                        </TouchableOpacity>
-                        {/* Space ends */}
-                        <TouchableOpacity onPress={() => this.props.navigation.toggleDrawer()}>
-                            <Icon name='cart' style={{color:'white'}} />
-                        </TouchableOpacity>
+                          <TouchableOpacity onPress={() => this.props.navigation.toggleDrawer()}>
+                            <Icon name='filter-list' type="MaterialIcons" style={{color:'white'}} />
+                          </TouchableOpacity>
+                          {/* for space */}
+                          <TouchableOpacity>
+                              <Icon name='cart' style={{color:'#808080'}} />
+                          </TouchableOpacity>
+                          {/* Space ends */}
+                          <TouchableOpacity onPress={() => this.props.navigation.toggleDrawer()}>
+                              <Icon name='cart' style={{color:'white'}} />
+                          </TouchableOpacity>
                         </Right>
                 </Header>
 

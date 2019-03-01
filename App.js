@@ -21,6 +21,7 @@ import NewPassword from './src/components/NewPassword';
 import DisplayItems from './src/components/DisplayItems';
 import WishList from './src/components/WishList';
 import Cart from './src/components/Cart';
+import OrderDetail from './src/components/OrderDetail';
 
 const navigationOptions = (props) => (
     <SafeAreaView style={{flex:1,}}>
@@ -65,6 +66,9 @@ const AppDrawer =  DrawerNavigator({
   },
   NewPassword:{
     screen:NewPassword
+  },
+  Order:{
+    screen:OrderDetail
   }
 },
   // },
@@ -92,7 +96,7 @@ const AppDrawer =  DrawerNavigator({
    inactiveTintColor:"white",
    labelStyle:{color:'white'},
  },
- initialRouteName:"Cart",
+ initialRouteName:"Order",
  mode:"modal"
 }
 ) 

@@ -12,8 +12,7 @@ import White from '../Assets/Images/white_shirt.jpg';
 export default class Cart extends Component {
 
     static navigationOptions={
-        drawerIcon:<Icon name="cart" style={{color:"white"}} />,
-        drawerLabel:"My Cart"
+        drawerLabel:() => null
     }
 
   render() {
@@ -21,18 +20,28 @@ export default class Cart extends Component {
         <SafeAreaView style={{flex:1}}>
                     <Header style={{backgroundColor: '#808080',}}>
                         <Left>
-                            <TouchableOpacity onPress={() => this.props.navigation.toggleDrawer()}>
-                                <Icon name='menu' style={{color:'white'}} />
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate('Home')}>
+                                <Icon name='arrow-back' style={{color:'white'}} />
                             </TouchableOpacity>
                         </Left>
-                        <Body style={{alignItems:"flex-end",marginLeft:50}}>
+                        <Body style={{alignItems:"center",marginLeft:50,}}>
                             <Title>Alpha Store</Title>
                         </Body>
-                        <Right>
-                        <TouchableOpacity onPress={() => this.props.navigation.navigate('Cart')}>
-                            <Icon name='cart' style={{color:'white'}} />
-                        </TouchableOpacity>
-                        </Right>
+                        <Right />
+                </Header>
+
+                {/* add adress */}
+
+                <Header style={{backgroundColor: 'black',}}>
+                        <Left style={{width:"20%",}}>
+                            <TouchableOpacity>
+                                <Icon name='arrow-back' style={{color:'black'}} />
+                            </TouchableOpacity>
+                        </Left>
+                        <Body style={{alignItems:"flex-end"}}>
+                            <Title><Icon name="add" style={{color:"white",fontSize:10}} />Alpha Store</Title>
+                        </Body>
+                        <Right />
                 </Header>
 
                 <Content>
@@ -145,11 +154,9 @@ export default class Cart extends Component {
                     <Text style={{color:"black",fontWeight:"bold"}}>Grand Total(Rs): 1424.00</Text>
                 </Footer>
                 
-                <TouchableOpacity onPress={() => this.props.navigation.navigate('Order')}>
-                    <Footer style={{alignItems:"center",justifyContent: 'center',backgroundColor: "black",}}>
-                        <Text style={{color:"white",fontWeight:"bold"}}>PLACE ORDER</Text>
-                    </Footer>
-                </TouchableOpacity>
+                <Footer style={{alignItems:"center",justifyContent: 'center',backgroundColor: "black",}}>
+                    <Text style={{color:"white",fontWeight:"bold"}}>PLACE ORDER</Text>
+                </Footer>
         </SafeAreaView>
     )
   }
