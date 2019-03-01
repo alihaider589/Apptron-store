@@ -22,6 +22,7 @@ import DisplayItems from './src/components/DisplayItems';
 import WishList from './src/components/WishList';
 import Cart from './src/components/Cart';
 import OrderDetail from './src/components/OrderDetail';
+import CreditCard from './src/components/CreditCard'
 
 const navigationOptions = (props) => (
     <SafeAreaView style={{flex:1,}}>
@@ -69,6 +70,9 @@ const AppDrawer =  DrawerNavigator({
   },
   Order:{
     screen:OrderDetail
+  },
+  Credit:{
+    screen:CreditCard
   }
 },
   // },
@@ -96,7 +100,7 @@ const AppDrawer =  DrawerNavigator({
    inactiveTintColor:"white",
    labelStyle:{color:'white'},
  },
- initialRouteName:"Order",
+ initialRouteName:"Credit",
  mode:"modal"
 }
 ) 
