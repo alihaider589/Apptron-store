@@ -13,7 +13,7 @@ import {
 import CreditFront from '../Assets/Images/card-front.png';
 import CreditBack from '../Assets/Images/card-back.png';
 
-const SWIPER_HEIGHT = 180;
+const SWIPER_HEIGHT = 130;
 import CreditCard, {CardImages} from 'react-native-credit-card';
 import Swiper from 'react-native-swiper';
 import { Input } from 'native-base';
@@ -36,6 +36,7 @@ const styles = StyleSheet.create({
     },
     wrapper: {
         height: SWIPER_HEIGHT,
+        marginTop: 200,
     },
     slide: {
         height: SWIPER_HEIGHT,
@@ -86,10 +87,7 @@ export default class RNCreditCard extends Component {
         this.swiper.scrollBy(1);
     }
 
-    componentDidMount() {
-        this.refs['number'].focus();
-    }
-
+   
     onMomentumScrollEnd(e, state, context) {
         var indexMap = [
             'number',
@@ -124,13 +122,14 @@ export default class RNCreditCard extends Component {
                     style={{marginVertical: 10, marginHorizontal: 10, marginBottom: 0, elevation: 3, alignSelf: 'center'}}
                     imageFront={require('../Assets/Images/card-front.png')}
                     imageBack={require('../Assets/Images/card-back.png')}
-                    shiny={true}
-                    bar={true}
+                    shiny={false}
+                    bar={false}
                     focused={this.state.focused}
                     number={this.state.number}
                     name={this.state.name}
                     expiry={this.state.expiry}
-                    cvc={this.state.cvc}/>
+                    cvc={this.state.cvc}
+                    />
                 
                 <Swiper 
                     style={styles.wrapper} 
@@ -142,27 +141,27 @@ export default class RNCreditCard extends Component {
                     <View style={styles.slide}>
                         <View style={styles.card}>
                             <Text style={styles.textNumber}>CARD NUMBER</Text>
-                            <Input ref="number" autoFocus={true} value={this.state.number} onChangeText={(number) => this.setState({number})} style={{width:(Dimensions.get('window').width-40),borderBottomColor:"red",borderBottomWidth:2}}/>
+                            <TextInput ref="number" autoFocus={true} value={this.state.number} onChangeText={(number) => this.setState({number})} style={{width:(Dimensions.get('window').width-70)}}/>
                         </View>
                     </View>
                     <View style={styles.slide}>
                         <View style={styles.card}>
                             <Text style={styles.textName}>CARD HOLDER'S NAME</Text>
-                            <Input ref="name" value={this.state.name} onChangeText={(name) => this.setState({name})} style={{width:(Dimensions.get('window').width-40),borderBottomColor:"red",borderBottomWidth:2}}/>
+                            <TextInput ref="name" value={this.state.name} onChangeText={(name) => this.setState({name})} style={{width:(Dimensions.get('window').width-70)}}/>
                         </View>
                     </View>
                     <View style={styles.slide}>
                         <View style={styles.card}>
                             <Text style={styles.textName}>EXPIRY</Text>
-                            <Input ref="expiry" value={this.state.expiry} onChangeText={(expiry) => this.setState({expiry})} style={{width:(Dimensions.get('window').width-40),borderBottomColor:"red",borderBottomWidth:2}}/>
+                            <TextInput ref="expiry" value={this.state.expiry} onChangeText={(expiry) => this.setState({expiry})} style={{width:(Dimensions.get('window').width-70)}}/>
                         </View>
                     </View>
                     <View style={styles.slide}>
                         <View style={styles.card}>
                             <Text style={styles.textCvc}>CVV/CVC NUMBER</Text>
-                            <Input ref="cvc" value={this.state.cvc} onChangeText={(cvc) => this.setState({cvc})} style={{width:(Dimensions.get('window').width-40),borderBottomColor:"red",borderBottomWidth:2}}/>
+                            <TextInput ref="cvc" value={this.state.cvc} onChangeText={(cvc) => this.setState({cvc})} style={{width:(Dimensions.get('window').width-70)}}/>
                         </View>
-                    </View>
+                    </View>             
                 </Swiper>
                 <TouchableOpacity onPress={this.onNext.bind(this)}>
                     <View style={styles.button}>
