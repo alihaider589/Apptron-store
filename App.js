@@ -22,7 +22,8 @@ import DisplayItems from './src/components/DisplayItems';
 import WishList from './src/components/WishList';
 import Cart from './src/components/Cart';
 import OrderDetail from './src/components/OrderDetail';
-import CreditMake from './src/components/CreditCard';
+import CartDetail from './src/components/CartDetail';
+import RNCreditCard from './src/components/CreditCard';
 
 const navigationOptions = (props) => (
     <SafeAreaView style={{flex:1,}}>
@@ -72,7 +73,10 @@ const AppDrawer =  DrawerNavigator({
     screen:OrderDetail
   },
   Credit:{
-    screen:CreditMake
+    screen:RNCreditCard
+  },
+  CartDetail:{
+    screen:CartDetail
   }
 },
   // },
@@ -100,7 +104,7 @@ const AppDrawer =  DrawerNavigator({
    inactiveTintColor:"white",
    labelStyle:{color:'white'},
  },
- initialRouteName:"Credit",
+ initialRouteName:"CartDetail",
  mode:"modal"
 }
 ) 

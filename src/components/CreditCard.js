@@ -70,6 +70,11 @@ const styles = StyleSheet.create({
 });
 
 export default class RNCreditCard extends Component {
+
+    static navigationOptions = {
+        drawerLabel:() => null
+    }
+
     constructor(props) {
         super(props);
         this.state = {
