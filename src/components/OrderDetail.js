@@ -93,7 +93,9 @@ export default class Cart extends Component {
                 </Content>
                 
                 <Footer style={{alignItems:"center",justifyContent: 'center',backgroundColor: "black",}}>
-                    <Text style={{color:"white",fontWeight:"bold"}}>PAYMENT</Text>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('Credit')}>
+                        <Text style={{color:"white",fontWeight:"bold"}}>PAYMENT</Text>
+                    </TouchableOpacity>
                 </Footer>
         </SafeAreaView>
     )

@@ -22,7 +22,7 @@ import DisplayItems from './src/components/DisplayItems';
 import WishList from './src/components/WishList';
 import Cart from './src/components/Cart';
 import OrderDetail from './src/components/OrderDetail';
-import CreditCard from './src/components/CreditCard'
+import CreditMake from './src/components/CreditCard';
 
 const navigationOptions = (props) => (
     <SafeAreaView style={{flex:1,}}>
@@ -72,7 +72,7 @@ const AppDrawer =  DrawerNavigator({
     screen:OrderDetail
   },
   Credit:{
-    screen:CreditCard
+    screen:CreditMake
   }
 },
   // },
