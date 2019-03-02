@@ -36,32 +36,32 @@ export default class Home extends Component{
                 <ScrollView>
                     <View style={style.View}>
                         <View>
-                            <TouchableOpacity onPress={() => this.props.navigation.navigate('WishList')}>
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate('Men')}>
                                 <Image source={Beauty} style={{width:"100%", height:150}} />
                                 <View style={style.ViewComponent}><Text style={{fontWeight:"bold",color:"white"}}>SUMMER SALE</Text></View>
                             </TouchableOpacity>
                         </View>
                     </View>
                     <View>
-                        <TouchableOpacity onPress={() => this.props.navigation.navigate('WishList')}>
+                        <TouchableOpacity onPress={() => this.props.navigation.navigate('Men')}>
                             <Image source={Men} style={{width:"100%", height:150}} />
                             <View style={style.ViewComponent}><Text style={{fontWeight:"bold",color:"white"}}>2018 DISCOUNT %50</Text></View>
                         </TouchableOpacity>
                      </View>      
                     <View>
-                        <TouchableOpacity onPress={() => this.props.navigation.navigate('WishList')}>
+                        <TouchableOpacity onPress={() => this.props.navigation.navigate('Men')}>
                             <Image source={Women} style={{width:"100%", height:150}} />
                             <View style={style.ViewComponent}><Text style={{fontWeight:"bold",color:"white"}}>SHIRT</Text></View>
                         </TouchableOpacity>
                     </View>
                     <View>
-                        <TouchableOpacity onPress={() => this.props.navigation.navigate('WishList')}>
+                        <TouchableOpacity onPress={() => this.props.navigation.navigate('Men')}>
                             <Image source={Shoes} style={{width:"100%", height:150}} />
                             <View style={style.ViewComponent}><Text style={{fontWeight:"bold",color:"white"}}>SHOES</Text></View>
                         </TouchableOpacity>
                     </View>
                     <View>
-                        <TouchableOpacity onPress={() => this.props.navigation.navigate('WishList')}>    
+                        <TouchableOpacity onPress={() => this.props.navigation.navigate('Men')}>    
                             <Image source={Electronics} style={{width:"100%", height:150}} />
                             <View style={style.ViewComponent}><Text style={{fontWeight:"bold",color:"white"}}>ELECTRONICS</Text></View>
                          </TouchableOpacity>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {Platform, StyleSheet, Text, View,Image,Dimensions,ImageBackground, TouchableOpacity,SafeAreaView,ScrollView} from 'react-native';
-import {Header,Button,Form,Picker,Left,Body,Right,Icon,Title, Drawer,Container,Content, ScrollableTab, Footer} from 'native-base'
+import {Header,Button,Form,Picker,Left,Body,Right,Icon,Title, Drawer,Container,Content, ScrollableTab, Footer, Toast} from 'native-base'
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import Shorts from '../Assets/Images/shorts.jpg';
 import Shirt from '../Assets/Images/shirt.jpg';
@@ -13,7 +13,7 @@ import Shoes from '../Assets/Images/shoes_second.jpg';
 import Lawn from '../Assets/Images/women_lawn.jpg';
 import Modal from "react-native-modal";
 
-export default class CartDetail extends Component {
+export default class CartDetail5 extends Component {
     state = {
         isModalVisible: false,
       };
@@ -34,7 +34,7 @@ export default class CartDetail extends Component {
                     <Text style={{fontWeight:"bold",color:"white"}}>ALPHA STORE</Text>
                 </View>
            </View>
-           <ImageBackground source={Shorts} style={{width:Dimensions.get('window').width,height:Dimensions.get('window').height}}>
+           <ImageBackground source={Ladies} style={{width:Dimensions.get('window').width,height:Dimensions.get('window').height}}>
                 <View style={{width:"100%",alignItems:"flex-end",height:(Dimensions.get('window').height-120),}}>
                     <View style={{width:"40%",height:40,alignItems:"center",justifyContent: 'center',marginTop: 10, backgroundColor:"rgba(192,192,192,0.7)"}}>
                         <Text style={{color:"black",fontWeight:"bold"}}>RS. 99.0</Text>
@@ -52,7 +52,7 @@ export default class CartDetail extends Component {
                         mode="dropdown"
                         iosHeader="Select your SIM"
                         Icon={<Icon name="arrow-down" />}
-                        style={{ width: undefined,flexGrow:1 }}
+                        style={{ width: undefined,flexGrow:2 }}
                         placeholder="Color"
                         >
                             <Picker.Item label="Color" value={null} />
@@ -63,35 +63,30 @@ export default class CartDetail extends Component {
                         mode="dropdown"
                         iosHeader="Select your SIM"
                         Icon={<Icon name="arrow-down" />}
-                        style={{ width: undefined,flexGrow:1 }}
+                        style={{ width: undefined,flexGrow:2 }}
                         placeholder="Color"
                         >
-                            <Picker.Item label="Color" value={null} />
-                            <Picker.Item label="Blue" value="Blue" />
-                            <Picker.Item label="Red" value="Red" />
+                            <Picker.Item label="Size" value={null} />
+                            <Picker.Item label="10" value="Blue" />
+                            <Picker.Item label="12" value="Red" />
                         </Picker>
-                        <TouchableOpacity style={{flexGrow:1,height:(Dimensions.get('window').height-50),alignItems: 'center',justifyContent: 'center',}}>
-                        <View >
-                            <Button
-                            title="Submit"
-                            color="#841584"
-                            accessibilityLabel="Learn more about this purple button"
-                            style={{backgroundColor: "black",alignItems:"center",justifyContent:"center",}}
-                            />
-                        </View>
+                        <TouchableOpacity style={{flexGrow:1}} onPress={() =>{Toast.show({text:"Item added successfully",duration:2000})}}>
+                            <View style={{width:"80%",justifyContent: 'center',marginLeft:10,marginRight:0,marginTop:5,alignItems: 'center',height:35,backgroundColor: 'black',}}>
+                            <Text style={{color:"white"}}>ADD TO CART</Text>
+                            </View>
                         </TouchableOpacity>
                    </View>
                 </View>
            </ImageBackground>
            <Modal animationInTiming={700} animationOutTiming={700} backdropOpacity={0} isVisible={this.state.isModalVisible} style={style.BottomModal}>
-                <View style={{marginLeft:10,backgroundColor: "white",}}>
+                <View style={{backgroundColor: "white",}}>
                      <View style={{alignItems:"flex-end",marginTop:10}}>
                           <TouchableOpacity onPress={this._toggleModal}>
                               <Icon name="times" type="FontAwesome" style={{marginRight: 20,}}/>
                           </TouchableOpacity>
                      </View>
-                     <Text>
-                        <Text style={{fontWeight:"bold",color:"black"}}>Bermuda Shorts</Text>{"\n"}{"\n"}
+                     <Text style={{ marginLeft: 10,}}>
+                        <Text style={{fontWeight:"bold",color:"black",}}>Bermuda Shorts</Text>{"\n"}{"\n"}
                         <Text style={{fontWeight:"bold",color:"black"}}>Code:</Text> 26ASHADF782 {"\n"}{"\n"}
                         <Text style={{fontWeight:"bold",color:"black"}}>Price:</Text> 149.00 {"\n"}{"\n"}
                         <Text style={{fontWeight:"bold",color:"black"}}>Brand:</Text> Brand Name {"\n"}{"\n"}

@@ -47,59 +47,73 @@ export default class DisplayItems extends Component {
       <ScrollView>
          <Grid>
             <Col style={style.ColumnStyle}>
-               <Image source={Shorts} style={{width:150, height:200}} />
-                  <View style={style.ViewDisplay}>
-                    <Text style={style.TextStyle}>Bermuda shorts by</Text>
-                    <Text style={style.TextStyle}>Armani</Text>
-                  </View>
+              <TouchableOpacity onPress={() => this.props.navigation.navigate('CartDetail1')}>
+                  <Image source={Shorts} style={{width:150, height:200}} />
+                      <View style={style.ViewDisplay}>
+                        <Text style={style.TextStyle}>Bermuda shorts by</Text>
+                        <Text style={style.TextStyle}>Armani</Text>
+                      </View>
+              </TouchableOpacity>
             </Col>
             <Col style={style.ColumnStyle}>
-               <Image source={Shirt} style={{width:150, height:200}} />
-                  <View style={style.ViewDisplay}>
-                    <Text style={style.TextStyle}>New Mens Shirt</Text>
-                    <Text style={style.TextStyle}>Chemise Homme 2016</Text>
-                  </View>
-            </Col>
-          </Grid>
-          <Grid>
-            <Col style={style.ColumnStyle}>
-               <Image source={Tshirt} style={{width:150, height:200}} />
-                  <View style={style.ViewDisplay}>
-                    <Text style={style.TextStyle}>Lastree Limited Edition</Text>
-                    <Text style={style.TextStyle}>t-shirt</Text>
-                  </View>
-            </Col>
-            <Col style={style.ColumnStyle}>
-               <Image source={Green} style={{width:150, height:200}} />
-                  <View style={style.ViewDisplay}>
-                    <Text style={style.TextStyle}>Saint Seiya Limited</Text>
-                    <Text style={style.TextStyle}>Edition Gold Cloth</Text>
-                  </View>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('CartDetail2')}>
+                  <Image source={Shirt} style={{width:150, height:200}} />
+                      <View style={style.ViewDisplay}>
+                        <Text style={style.TextStyle}>New Mens Shirt</Text>
+                        <Text style={style.TextStyle}>Chemise Homme 2016</Text>
+                      </View>
+                </TouchableOpacity>
             </Col>
           </Grid>
           <Grid>
             <Col style={style.ColumnStyle}>
-               <Image source={Ladies} style={{width:150, height:200}} />
-                  <View style={style.ViewDisplay}>
-                    <Text style={style.TextStyle}>Ladies Long Shirt</Text>
-                    <Text style={style.TextStyle}></Text>
-                  </View>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('CartDetail3')}>
+                  <Image source={Tshirt} style={{width:150, height:200}} />
+                      <View style={style.ViewDisplay}>
+                        <Text style={style.TextStyle}>Lastree Limited Edition</Text>
+                        <Text style={style.TextStyle}>t-shirt</Text>
+                      </View>
+                </TouchableOpacity>  
             </Col>
             <Col style={style.ColumnStyle}>
-               <Image source={White} style={{width:150, height:200}} />
-                  <View style={style.ViewDisplay}>
-                    <Text style={style.TextStyle}>Cloth Design For Men</Text>
-                    <Text style={style.TextStyle}>Casual Shirt</Text>
-                  </View>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('CartDetail4')}>
+                  <Image source={Green} style={{width:150, height:200}} />
+                      <View style={style.ViewDisplay}>
+                        <Text style={style.TextStyle}>Saint Seiya Limited</Text>
+                        <Text style={style.TextStyle}>Edition Gold Cloth</Text>
+                      </View>
+                </TouchableOpacity>
             </Col>
           </Grid>
           <Grid>
             <Col style={style.ColumnStyle}>
-               <Image source={WhiteSecond} style={{width:150, height:200}} />
-                  <View style={style.ViewDisplay}>
-                    <Text style={style.TextStyle}>Men Shirt Chemise</Text>
-                    <Text style={style.TextStyle}>Homme 2016</Text>
-                  </View>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('CartDetail5')}>
+                  <Image source={Ladies} style={{width:150, height:200}} />
+                      <View style={style.ViewDisplay}>
+                        <Text style={style.TextStyle}>Ladies Long Shirt</Text>
+                        <Text style={style.TextStyle}></Text>
+                      </View>
+                </TouchableOpacity>
+            </Col>
+            <Col style={style.ColumnStyle}>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('CartDetail6')}>
+                  <Image source={White} style={{width:150, height:200}} />
+                      <View style={style.ViewDisplay}>
+                        <Text style={style.TextStyle}>Cloth Design For Men</Text>
+                        <Text style={style.TextStyle}>Casual Shirt</Text>
+                      </View>
+                </TouchableOpacity>      
+            </Col>
+          </Grid>
+          <Grid>
+            <Col style={style.ColumnStyle}>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('CartDetail6')}>
+                  <Image source={WhiteSecond} style={{width:150, height:200}} />
+                      <View style={style.ViewDisplay}>
+                        <Text style={style.TextStyle}>Men Shirt Chemise</Text>
+                        <Text style={style.TextStyle}>Homme 2016</Text>
+                      </View>
+                </TouchableOpacity>
             </Col>
             <Col style={style.ColumnStyle}>
                <Image source={Shoes} style={{width:150, height:200}} />
