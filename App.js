@@ -30,6 +30,7 @@ import CartDetail4 from './src/components/CartDetail4';
 import CartDetail5 from './src/components/CartDetail5';
 import CartDetail6 from './src/components/CartDetail6';
 import CartDetail7 from './src/components/CartDetail7';
+import ListAccordion from './sample';
 
 const navigationOptions = (props) => (
     <SafeAreaView style={{flex:1,}}>

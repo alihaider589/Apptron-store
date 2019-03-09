@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import {Platform, StyleSheet, Text, View,Image, TouchableOpacity,SafeAreaView,ScrollView} from 'react-native';
-import {Header,Button,Left,Body,Right,Icon,Title, Drawer,Container,Content, ScrollableTab} from 'native-base'
+import {Platform,TextInput, StyleSheet, Text, View,Image, TouchableOpacity,SafeAreaView,ScrollView} from 'react-native';
+import {Header,Button,Input,Left,Body,Right,Icon,Title, Drawer,Container,Content, ScrollableTab} from 'native-base'
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import Shorts from '../Assets/Images/shorts.jpg';
 import Shirt from '../Assets/Images/shirt.jpg';
@@ -11,8 +11,12 @@ import White from '../Assets/Images/white_shirt.jpg';
 import WhiteSecond from '../Assets/Images/white_shirt_second.jpg';
 import Shoes from '../Assets/Images/shoes_second.jpg';
 import Lawn from '../Assets/Images/women_lawn.jpg';
+import Modal from "react-native-modal";
 
 export default class DisplayItems extends Component {
+  state={
+    searchModal:false
+  }
     static navigationOptions = {
         drawerIcon:<Icon name="male" type="FontAwesome" style={{fontSize: 30,color:"white"}}/>,
         drawerLabelColor:"white",
@@ -20,6 +24,15 @@ export default class DisplayItems extends Component {
   render() {
     return (
        <SafeAreaView style={{flex:1, backgroundColor: "silver",}}>
+         <Modal isVisible={this.state.searchModal} animationInTiming={700} animationOutTiming={700} backdropOpacity={0.5} style={{width:"100%",height:60,alignItems:"flex-start",justifyContent: 'flex-start',}}>
+            <TouchableOpacity onPress={() => {this.setState({searchModal:false})}}>
+              <View style={{flexDirection:"row",backgroundColor: "white",justifyContent: 'center',}}>
+                <Icon name="times" type="FontAwesome" style={{marginTop:5,}} />
+                <TextInput style={{height:40,width:"85%",backgroundColor: "white",}} placeholder="Search">
+                </TextInput>
+              </View>
+            </TouchableOpacity>
+        </Modal>
                     <Header style={{backgroundColor: '#808080',}}>
                         <Left>
                             <TouchableOpacity onPress={() => this.props.navigation.toggleDrawer()}>
@@ -30,7 +43,7 @@ export default class DisplayItems extends Component {
                             <Title>Alpha Store</Title>
                         </Body>
                         <Right>
-                          <TouchableOpacity onPress={() => this.props.navigation.toggleDrawer()}>
+                          <TouchableOpacity onPress={() => {this.setState({searchModal:true})}}>
                             <Icon name='filter-list' type="MaterialIcons" style={{color:'white'}} />
                           </TouchableOpacity>
                           {/* for space */}

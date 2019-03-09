@@ -16,6 +16,7 @@ import Modal from "react-native-modal";
 export default class CartDetail1 extends Component {
     state = {
         isModalVisible: false,
+        searchModal: false,
       };
 
     static navigationOptions = {
